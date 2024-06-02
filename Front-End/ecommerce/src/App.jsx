@@ -1,9 +1,10 @@
 import "./App.css";
+import Login from "./View/Login/Login";
 
 function App() {
   return (
     <>
-      <h1>ola mundo</h1>
+      <Login />
     </>
   );
 }
