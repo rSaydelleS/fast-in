@@ -1,10 +1,14 @@
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   return (
     <>
-      <main>
+      <main className="">
         <section>
           <h1>Bem vndo ao fast-in</h1>
         </section>
@@ -18,14 +22,15 @@ const Login = () => {
             <input
               type="text"
               placeholder="Digite seu email"
-              {...register("Email")}
+              {...register("Email", { required: true })}
             />
             <label>Senha:</label>
             <input
               type="password"
               placeholder="******"
-              {...register("Senha")}
+              {...register("Senha", { required: true })}
             />
+            {errors.Senha && <span>Email ou senha não eocntrados</span>}
             <button type="submit">Entrar!</button>
           </form>
         </section>
