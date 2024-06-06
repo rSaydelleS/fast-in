@@ -44,7 +44,7 @@ const Login = () => {
                   Não possui uma conta? Clique aqui para criar
                 </a>
                 <button
-                  className=" px-5 py-2 rounded-xl bg-green-400 text-lg"
+                  className=" px-5 py-2 rounded-xl bg-green-400 text-lg hover:bg-green-600 hover:text-white transition duration-400 ease-in"
                   type="submit"
                 >
                   Entrar!
