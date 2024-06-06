@@ -1,18 +1,22 @@
+import Item_Card from "../../components/Card/Item_Card";
+
 const Home = () => {
   return (
     <>
-      <main>
-        <hearder>
+      <main className="w-screen h-screen bg-neutral-100 flex flex-col justify-between items-center text-justify ">
+        <hearder className="bg-slate-600 text-white w-full p-4">
           <section>
             <h1>Header</h1>
           </section>
         </hearder>
         <section>
-          <h1>Card</h1>
+          <Item_Card />
         </section>
-        <footer>
-          <h1>E commerce ficticio</h1>
-        </footer>
+        <section className="bg-slate-600 text-white w-full p-4">
+          <footer>
+            <h1>E commerce ficticio</h1>
+          </footer>
+        </section>
       </main>
     </>
   );
