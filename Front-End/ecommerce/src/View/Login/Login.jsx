@@ -6,6 +6,10 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const submitForm = (data) => {
+    console.log(data);
+  };
   return (
     <>
       <main className="flex flex-col justify-center items-center gap-4 bg-gray-300 w-screen h-screen">
@@ -15,9 +19,7 @@ const Login = () => {
           </section>
           <section>
             <form
-              onSubmit={handleSubmit((data) => {
-                console.log(data);
-              })}
+              onSubmit={handleSubmit((data) => submitForm(data))}
               className="flex flex-col items-start gap-8 font-semibold"
             >
               <label className="text-2xl">Email:</label>

@@ -1,12 +1,13 @@
 import Item_Card from "../../components/Card/Item_Card";
+import Header from "../../components/Header/Header";
 
 const Home = () => {
   return (
     <>
       <main className="w-screen h-screen bg-neutral-100 flex flex-col justify-between items-center text-justify ">
-        <hearder className="bg-slate-600 text-white w-full p-4">
+        <hearder className="bg-white w-full">
           <section>
-            <h1>Header</h1>
+            <Header />
           </section>
         </hearder>
         <section>
