@@ -12,26 +12,33 @@ const Header = () => {
     },
     {
       id: 3,
-      description: "centra de suporte",
+      description: "Centra de suporte",
     },
   ]);
 
   return (
     <>
       <header>
-        <main>
+        <main className="flex flex-grow items-center justify-around ">
           <div className="w-[150px] h-[150px]">
             <img src="../../../public/fast-in-logo.png" alt="Logo" />
           </div>
           <section>
-            <ul>
+            <ul className="flex flex-row gap-8 font-bold text-xl">
               {about.map((item) => {
-                return <li key={item.id}>{item.description}</li>;
+                return (
+                  <li
+                    key={item.id}
+                    className="cursor-pointer hover:border-b-2 hover:border-red-500"
+                  >
+                    {item.description}
+                  </li>
+                );
               })}
             </ul>
           </section>
           <section>
-            <p>usuário</p>
+            <p>nome do usuário</p>
           </section>
         </main>
       </header>
