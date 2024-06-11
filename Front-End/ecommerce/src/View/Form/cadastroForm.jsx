@@ -8,30 +8,56 @@ const Cadastro = () => {
   };
   return (
     <>
-      <main>
-        <section>
+      <main className="flex flex-col justify-center items-center p-4 w-screen h-screen">
+        <section className=" m-4 p-12 bg-neutral-100 shadow-xl shadow-black rounded-xl">
           <section>
-            <h1>Cadastre seu produto</h1>
+            <section>
+              <h1 className="font-bold text-2xl italic">
+                Cadastre seu produto
+              </h1>
+            </section>
           </section>
-        </section>
-        <section>
-          <form onSubmit={handleSubmit((data) => cadastrarProduto(data))}>
-            <label>Nome do produto:</label>
-            <input
-              {...register("Produto", { required: true })}
-              placeholder="Seu produto"
-              type="text"
-            />
-            <label>Preço:</label>
-            <input
-              {...register("Preço", { required: true })}
-              placeholder="R$:00,00"
-              type="text"
-            />
-            <label>Imagem:</label>
-            <input {...register("Imagem", { required: true })} type="file" />
-            <button type="submit">Cadastrar!</button>
-          </form>
+          <section>
+            <form
+              className="flex flex-col gap-4"
+              onSubmit={handleSubmit((data) => cadastrarProduto(data))}
+            >
+              <label className="font-bold text-lg after:content-['*'] after:text-red-500">
+                Nome do produto:
+              </label>
+              <input
+                {...register("Produto", { required: true })}
+                placeholder="Seu produto"
+                type="text"
+                className="p-2 rounded-xl text-xl"
+              />
+              <label className="font-bold text-lg after:content-['*'] after:text-red-500">
+                Preço:
+              </label>
+              <input
+                {...register("Preço", { required: true })}
+                placeholder="R$:00,00"
+                type="text"
+                className="p-2 rounded-xl text-xl"
+              />
+              <label className="font-bold text-lg after:content-['*'] after:text-red-500">
+                Imagem:
+              </label>
+              <input
+                className="p-2 rounded-xl text-xl"
+                {...register("Imagem", { required: true })}
+                type="file"
+              />
+              <section>
+                <button
+                  className=" px-5 py-2 rounded-xl bg-sky-400 text-lg hover:bg-black hover:text-white transition duration-400 ease-in"
+                  type="submit"
+                >
+                  Cadastrar!
+                </button>
+              </section>
+            </form>
+          </section>
         </section>
       </main>
     </>
