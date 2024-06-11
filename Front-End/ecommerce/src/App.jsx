@@ -1,11 +1,10 @@
 import "./App.css";
-// import Home from "../src/View/Home/Home";
-import Cadastro from "../src/View/Form/cadastroForm";
+import Home from "../src/View/Home/Home";
 
 function App() {
   return (
     <>
-      <Cadastro />
+      <Home />
     </>
   );
 }
