@@ -1,18 +1,22 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [about] = useState([
     {
       id: 1,
       description: "Cadastrar produto",
+      link: "/cadastrar",
     },
     {
       id: 2,
       description: "Sobre nós",
+      link: "/sobre",
     },
     {
       id: 3,
       description: "Centra de suporte",
+      link: "/ajuda",
     },
   ]);
 
@@ -31,7 +35,7 @@ const Header = () => {
                     key={item.id}
                     className="cursor-pointer hover:border-b-2 hover:border-red-500"
                   >
-                    {item.description}
+                    <Link to={item.link}>{item.description}</Link>
                   </li>
                 );
               })}
