@@ -5,11 +5,11 @@ const Home = () => {
   return (
     <>
       <main className="w-screen h-screen bg-neutral-100 flex flex-col justify-between items-center text-justify ">
-        <hearder className="bg-white w-full">
+        <header className="bg-white w-full">
           <section>
             <Header />
           </section>
-        </hearder>
+        </header>
         <section>
           <Item_Card />
         </section>

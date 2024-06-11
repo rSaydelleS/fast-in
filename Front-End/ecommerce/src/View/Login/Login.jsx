@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const {
@@ -7,8 +8,12 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
+  const navigate = useNavigate();
+
   const submitForm = (data) => {
-    console.log(data);
+    if (data) {
+      return navigate("/home");
+    }
   };
   return (
     <>
