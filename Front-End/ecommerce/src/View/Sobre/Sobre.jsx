@@ -14,7 +14,7 @@ const Sobre = () => {
           <p className="w-96">
             Querendo vender um produto? Cadastre ele agora mesmo{" "}
             <Link to={"/cadastrar"}>
-              <span className="italic hover:border-b-2 hover:border-black transition-all ease-in-out duration-200">
+              <span className="text-red-500 italic hover:text-black hover:border-b-2 hover:border-black transition-all ease-in-out duration-200">
                 AQUI
               </span>
             </Link>{" "}
