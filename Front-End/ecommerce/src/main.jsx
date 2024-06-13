@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import Form from "../src/View/Form/cadastroForm.jsx";
 import Sobre from "../src/View/Sobre/Sobre.jsx";
 import Ajuda from "../src/View/Ajuda/Ajuda.jsx";
+import Carrinho from "./View/Carrinho/Carinho.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/ajuda",
     element: <Ajuda />,
+  },
+  {
+    path: "/carrinho",
+    element: <Carrinho />,
   },
 ]);
 
