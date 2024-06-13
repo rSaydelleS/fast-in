@@ -18,6 +18,11 @@ const Header = () => {
       description: "Centra de suporte",
       link: "/ajuda",
     },
+    {
+      id: 4,
+      description: "Carrinho de compras",
+      link: "/carrinho",
+    },
   ]);
 
   return (
