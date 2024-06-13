@@ -2,7 +2,12 @@ const Ajuda = () => {
   return (
     <>
       <main>
-        <section>Central de ajuda</section>
+        <section>
+          <p>
+            Página ficticia, nenhum dado é verificado apenas para poder simular
+            um ecommerce e as etapas de percurso do usuário!
+          </p>
+        </section>
       </main>
     </>
   );
