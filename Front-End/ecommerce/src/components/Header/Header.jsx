@@ -25,7 +25,13 @@ const Header = () => {
       <header>
         <main className="flex flex-grow items-center justify-around ">
           <div className="w-[150px] h-[150px]">
-            <img src="../../../public/fast-in-logo.png" alt="Logo" />
+            <Link to={"/home"}>
+              <img
+                src="../../../public/fast-in-logo.png"
+                alt="Logo"
+                className="cursor-pointer"
+              />
+            </Link>
           </div>
           <section>
             <ul className="flex flex-row gap-8 font-bold text-xl">
