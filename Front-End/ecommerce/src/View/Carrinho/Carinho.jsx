@@ -1,8 +1,15 @@
+import CarrinhoItem from "../../components/Carrinho_Item/Carrinho_Item";
+
 const Carrinho = () => {
   return (
     <>
       <main>
-        <h1>Carrinho</h1>
+        <section>
+          <h1>Seus pedidos</h1>
+          <section>
+            <CarrinhoItem />
+          </section>
+        </section>
       </main>
     </>
   );
