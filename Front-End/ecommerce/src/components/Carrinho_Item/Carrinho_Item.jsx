@@ -1,9 +1,11 @@
 const CarrinhoItem = () => {
   return (
     <>
-      <main>
-        <section>
-          <div>img</div>
+      <main className="flex flex-row justify-around items-center">
+        <section className="flex flex-row gap-4">
+          <div className="flex justify-center items-center w-16 h-16 bg-black font-bold text-white">
+            img
+          </div>
           <div>
             <p>Descição do item</p>
           </div>
