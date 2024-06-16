@@ -6,22 +6,22 @@ const Header = () => {
     {
       id: 1,
       description: "Cadastrar produto",
-      link: "/cadastrar",
+      link: "/home/cadastrar",
     },
     {
       id: 2,
       description: "Sobre nós",
-      link: "/sobre",
+      link: "/home/sobre",
     },
     {
       id: 3,
       description: "Centra de suporte",
-      link: "/ajuda",
+      link: "/home/ajuda",
     },
     {
       id: 4,
       description: "Carrinho de compras",
-      link: "/carrinho",
+      link: "/home/carrinho",
     },
   ]);
 
