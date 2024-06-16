@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <main className="w-screen h-screen bg-neutral-100 flex flex-col justify-between items-center text-justify ">
-        <section>
+        <section className="my-12">
           <Item_Card />
         </section>
         <section className="bg-slate-600 text-white w-full p-4">
