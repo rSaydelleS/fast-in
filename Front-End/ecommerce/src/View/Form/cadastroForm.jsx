@@ -8,8 +8,8 @@ const Cadastro = () => {
   };
   return (
     <>
-      <main className="flex flex-col justify-center items-center p-4 w-screen h-screen">
-        <section className=" m-4 p-12 bg-neutral-100 shadow-xl shadow-black rounded-xl">
+      <main className="flex flex-col justify-center items-center p-4 w-screen h-screen bg-neutral-100">
+        <section className=" m-4 p-12 bg-white shadow-xl shadow-black rounded-xl">
           <section>
             <section>
               <h1 className="font-bold text-2xl italic">
