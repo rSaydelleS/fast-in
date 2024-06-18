@@ -1,6 +1,7 @@
 const express = require(expres);
 const app = express();
 const port = 5173;
+const routes = require("./src/routes/routes");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -14,3 +15,5 @@ app.get("/", (req, res) => {
     status: "Ok",
   });
 });
+
+app.use("/home", routes);
