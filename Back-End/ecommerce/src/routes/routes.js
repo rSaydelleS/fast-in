@@ -10,4 +10,17 @@ router.get("/home", async (req, res) => {
   });
 });
 
+router.post("/novo", async (req, res) => {
+  let data = await prodModel.create({
+    nomeProduto: req.body.produto,
+    precoProduto: req.body.preco,
+    imgProduto: req.body.imagem,
+  });
+
+  res.json({
+    status: "ok",
+    data: data,
+  });
+});
+
 module.exports = router;
