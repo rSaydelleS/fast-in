@@ -1,8 +1,8 @@
-const express = require(express);
+const express = require("express");
 const router = express.Router();
 const prodModel = require("../model/prodModel");
 
-router.get("/home", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     let response = await prodModel.find({});
     res.json({

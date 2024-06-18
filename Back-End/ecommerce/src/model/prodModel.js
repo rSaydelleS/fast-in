@@ -1,6 +1,4 @@
-const { default: mongoose } = require("mongoose");
-
-const mongoose = require(mongoose);
+const mongoose = require("mongoose");
 const conn = require("../connection/bdconect");
 
 conn();
