@@ -15,11 +15,12 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/novo", async (req, res) => {
+  const { produto, preco, imagem } = req.body;
   try {
     let data = await prodModel.create({
-      nomeProduto: req.body.produto,
-      precoProduto: req.body.preco,
-      imgProduto: req.body.imagem,
+      nomeProduto: produto,
+      precoProduto: preco,
+      imgProduto: imagem,
     });
 
     res.json({
