@@ -1,10 +1,19 @@
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const Cadastro = () => {
   const { register, handleSubmit } = useForm();
 
-  const cadastrarProduto = (data) => {
-    console.log(data);
+  const cadastrarProduto = async (data) => {
+    try {
+      const cadastrar = await axios.post(
+        "http://localhost:8080/home/novo",
+        data
+      );
+      console.log(cadastrar);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>
@@ -26,7 +35,7 @@ const Cadastro = () => {
                 Nome do produto:
               </label>
               <input
-                {...register("Produto", { required: true })}
+                {...register("produto", { required: true })}
                 placeholder="Seu produto"
                 type="text"
                 className="p-2 rounded-xl text-xl"
@@ -35,7 +44,7 @@ const Cadastro = () => {
                 Preço:
               </label>
               <input
-                {...register("Preço", { required: true })}
+                {...register("preco", { required: true })}
                 placeholder="R$:00,00"
                 type="text"
                 className="p-2 rounded-xl text-xl"
@@ -45,7 +54,7 @@ const Cadastro = () => {
               </label>
               <input
                 className="p-2 rounded-xl text-xl"
-                {...register("Imagem", { required: true })}
+                {...register("imagem", { required: true })}
                 type="file"
               />
               <section>
