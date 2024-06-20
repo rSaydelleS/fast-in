@@ -4,9 +4,9 @@ const conn = require("../connection/bdconect");
 conn();
 const prodSchema = mongoose.Schema(
   {
-    nomeProduto: String,
-    precoProduto: Number,
-    imgProduto: String,
+    nomeProduto: { type: String, required: true },
+    precoProduto: { type: Number, required: true },
+    imgProduto: { type: String, required: true },
   },
   {
     timestemp: true,
