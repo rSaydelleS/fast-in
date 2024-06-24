@@ -26,15 +26,6 @@ function Cadastro() {
     } catch (error) {
       console.error("Error uploading file:", error);
     }
-    // try {
-    //   await axios.post("http://localhost:8080/home/novo", {
-    //     produto: data.produto,
-    //     preco: data.preco,
-    //     img: data.imagem,
-    //   });
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
 
   return (
