@@ -3,6 +3,7 @@ const router = express.Router();
 const prodModel = require("../model/prodModel");
 const upload = require("../../config/multer");
 router.use(express.json());
+
 router.get("/", async (req, res) => {
   try {
     let response = await prodModel.find({});
@@ -18,14 +19,11 @@ router.get("/", async (req, res) => {
 router.post("/novo", upload.single("productImage"), async (req, res) => {
   const { produto, preco } = req.body;
   const imgProduto = req.file.path;
-  console.log(produto, preco);
-  console.log(imgProduto);
-
   try {
     let data = await prodModel.create({
       nomeProduto: produto,
       precoProduto: preco,
-      imgProduto: file,
+      imgProduto: imgProduto,
     });
 
     res.json({
