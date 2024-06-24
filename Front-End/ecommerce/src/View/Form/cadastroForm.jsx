@@ -8,8 +8,8 @@ function Cadastro() {
     console.log(data);
 
     const formData = new FormData();
-    formData.append("productName", data.produto);
-    formData.append("productName", data.preco);
+    formData.append("produto", data.produto);
+    formData.append("preco", data.preco);
     formData.append("productImage", data.imagem[0]);
 
     try {
