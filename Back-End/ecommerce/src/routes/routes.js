@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const prodModel = require("../model/prodModel");
-const salvar = require("../../config/multer");
-
+const upload = require("../../config/multer");
+router.use(express.json());
 router.get("/", async (req, res) => {
   try {
     let response = await prodModel.find({});
@@ -15,26 +15,26 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/novo", salvar.single("file"), async (req, res) => {
+router.post("/novo", upload.single("productImage"), async (req, res) => {
   const { produto, preco } = req.body;
-  const file = req.file;
+  const imgProduto = req.file.path;
   console.log(produto, preco);
-  console.log(file);
+  console.log(imgProduto);
 
-  // try {
-  //   let data = await prodModel.create({
-  //     nomeProduto: produto,
-  //     precoProduto: preco,
-  //     imgProduto: file.path,
-  //   });
+  try {
+    let data = await prodModel.create({
+      nomeProduto: produto,
+      precoProduto: preco,
+      imgProduto: file,
+    });
 
-  //   res.json({
-  //     status: "ok",
-  //     data: data,
-  //   });
-  // } catch (error) {
-  //   console.log(error);
-  // }
+    res.json({
+      status: "ok",
+      data: data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 module.exports = router;
