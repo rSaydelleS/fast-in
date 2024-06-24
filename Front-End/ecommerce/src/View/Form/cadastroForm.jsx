@@ -1,20 +1,42 @@
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-const Cadastro = () => {
+function Cadastro() {
   const { register, handleSubmit } = useForm();
 
   const cadastrarProduto = async (data) => {
+    console.log(data);
+
+    const formData = new FormData();
+    formData.append("productName", data.produto);
+    formData.append("productName", data.preco);
+    formData.append("productImage", data.imagem[0]);
+
     try {
-      const cadastrar = await axios.post(
+      const response = await axios.post(
         "http://localhost:8080/home/novo",
-        data
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
       );
-      console.log(cadastrar);
+      console.log(response.data);
     } catch (error) {
-      console.log(error);
+      console.error("Error uploading file:", error);
     }
+    // try {
+    //   await axios.post("http://localhost:8080/home/novo", {
+    //     produto: data.produto,
+    //     preco: data.preco,
+    //     img: data.imagem,
+    //   });
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
+
   return (
     <>
       <main className="flex flex-col justify-center items-center p-4 w-screen h-screen bg-neutral-100">
@@ -29,6 +51,8 @@ const Cadastro = () => {
           <section>
             <form
               className="flex flex-col gap-4"
+              encType="multipart/form-data"
+              action="/novo"
               onSubmit={handleSubmit((data) => cadastrarProduto(data))}
             >
               <label className="font-bold text-lg after:content-['*'] after:text-red-500">
@@ -71,6 +95,6 @@ const Cadastro = () => {
       </main>
     </>
   );
-};
+}
 
 export default Cadastro;
