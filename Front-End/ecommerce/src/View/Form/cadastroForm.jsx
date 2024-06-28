@@ -5,8 +5,6 @@ function Cadastro() {
   const { register, handleSubmit } = useForm();
 
   const cadastrarProduto = async (data) => {
-    console.log(data);
-
     const formData = new FormData();
     formData.append("produto", data.produto);
     formData.append("preco", data.preco);
@@ -22,7 +20,6 @@ function Cadastro() {
           },
         }
       );
-      console.log(response.data);
     } catch (error) {
       console.error("Error uploading file:", error);
     }

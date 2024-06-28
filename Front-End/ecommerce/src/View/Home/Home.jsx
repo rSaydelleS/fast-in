@@ -19,9 +19,8 @@ const Home = () => {
   return (
     <>
       <main className="w-screen h-screen bg-neutral-100 flex flex-col justify-between items-center text-justify ">
-        <section className="my-12">
+        <section className="my-12 grid grid-cols-3 grid-rows-subgrid gap-16">
           {dados.map((item) => {
-            console.log(item);
             return <Item_Card key={item._id} dados={item} />;
           })}
         </section>
