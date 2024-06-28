@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
 
 router.post("/novo", upload.single("productImage"), async (req, res) => {
   const { produto, preco } = req.body;
-  const imgProduto = req.file.path;
+  const imgProduto = `http://localhost:8080/uploads/${req.file.filename}`;
   try {
     let data = await prodModel.create({
       nomeProduto: produto,
