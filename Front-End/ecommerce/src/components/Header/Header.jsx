@@ -28,8 +28,8 @@ const Header = () => {
   return (
     <>
       <header>
-        <main className="flex flex-grow items-center justify-around ">
-          <div className="w-[150px] h-[150px]">
+        <main className="max-sm:flex max-sm:flex-col max-sm:justify-start max-sm:items-start flex flex-grow items-center justify-around">
+          <div className="max-sm:w-[100px] max-sm:h-[100px] w-[150px] h-[150px]">
             <Link to={"/home"}>
               <img
                 src="../../../public/fast-in-logo.png"
@@ -38,8 +38,8 @@ const Header = () => {
               />
             </Link>
           </div>
-          <section>
-            <ul className="flex flex-row gap-8 font-bold text-xl">
+          <section className="w-full">
+            <ul className="flex flex-row gap-8 font-bold text-xl max-sm:text-base max-sm:gap-2">
               {about.map((item) => {
                 return (
                   <li
