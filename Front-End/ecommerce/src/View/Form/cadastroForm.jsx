@@ -28,7 +28,7 @@ function Cadastro() {
   return (
     <>
       <main className="flex flex-col justify-center items-center p-4 w-screen h-screen bg-neutral-100">
-        <section className=" m-4 p-12 bg-white shadow-xl shadow-black rounded-xl">
+        <section className=" m-4 p-12 bg-white shadow-xl shadow-black rounded-xl max-sm:w-80">
           <section>
             <section>
               <h1 className="font-bold text-2xl italic">
@@ -38,7 +38,7 @@ function Cadastro() {
           </section>
           <section>
             <form
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-4 text-justify"
               encType="multipart/form-data"
               action="/novo"
               onSubmit={handleSubmit((data) => cadastrarProduto(data))}
