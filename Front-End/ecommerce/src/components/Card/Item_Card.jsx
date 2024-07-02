@@ -3,7 +3,7 @@ const Item_Card = ({ dados }) => {
   return (
     <>
       <main>
-        <section className="w-96 h-96 bg-white rounded-xl font-bold flex justify-center items-center ">
+        <section className="w-96 h-96 bg-white rounded-xl font-bold flex justify-center items-center max-sm:w-64 max-sm:h-64 max-sm:p-4">
           <img src={dados.imgProduto} alt="Imagem do produto" srcSet="" />
         </section>
         <section className="text-xl py-3">

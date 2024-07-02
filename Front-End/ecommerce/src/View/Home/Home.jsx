@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <main className="w-screen h-screen bg-neutral-100 flex flex-col justify-between items-center text-justify ">
-        <section className="my-12 max-sm:flex max-sm:flex-col grid grid-cols-3 grid-rows-subgrid gap-16">
+        <section className=" my-12 grid grid-cols-3 grid-rows-subgrid gap-16 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:m-4">
           {dados.map((item) => {
             return <Item_Card key={item._id} dados={item} />;
           })}
