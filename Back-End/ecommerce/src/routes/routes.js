@@ -43,6 +43,21 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+router.put("/carrinho/:id", async (req, res) => {
+  try {
+    const id = req.params;
+    let response = await prodModel.findByIdAndUpdate(id.id, {
+      categoria: "",
+    });
+    res.json({
+      status: "ok",
+      data: response,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 router.post("/novo", upload.single("productImage"), async (req, res) => {
   const { produto, preco } = req.body;
   const imgProduto = `http://localhost:8080/uploads/${req.file.filename}`;
