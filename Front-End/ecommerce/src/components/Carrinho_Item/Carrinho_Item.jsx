@@ -8,7 +8,7 @@ const CarrinhoItem = ({ dados }) => {
             <img src={dados.imgProduto} alt="iamgem do seu produto" />
           </div>
           <div>
-            <p>{dados.nomeProduto}</p>
+            <p className="w-64">{dados.nomeProduto}</p>
           </div>
         </section>
         <section>
@@ -18,8 +18,12 @@ const CarrinhoItem = ({ dados }) => {
           <div>Forma de pagamento</div>
           <div>R${dados.precoProduto}</div>
           <div className="flex justify-around">
-            <button>Finalizar</button>
-            <button>Cancelar</button>
+            <button className="text-green-500 font-bold cursor-pointer transition-all duration-500 hover:text-green-400">
+              Finalizar
+            </button>
+            <button className="text-red-600 font-semibold cursor-pointer hover:text-red-400">
+              Cancelar
+            </button>
           </div>
         </section>
       </main>
