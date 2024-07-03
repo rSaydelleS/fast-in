@@ -5,11 +5,12 @@ conn();
 const prodSchema = mongoose.Schema(
   {
     nomeProduto: { type: String, required: true },
-    precoProduto: { type: Number, required: true },
+    precoProduto: { type: String, required: true },
     imgProduto: { type: String, required: true },
+    categoria: { type: String },
   },
   {
-    timestemp: true,
+    timestamps: true,
   }
 );
 

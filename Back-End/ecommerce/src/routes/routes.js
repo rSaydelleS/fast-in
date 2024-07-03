@@ -16,6 +16,33 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/carrinho", async (req, res) => {
+  try {
+    let response = await prodModel.find({ categoria: "carrinho" });
+    res.json({
+      status: "ok",
+      data: response,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.put("/:id", async (req, res) => {
+  try {
+    const id = req.params;
+    let response = await prodModel.findByIdAndUpdate(id.id, {
+      categoria: "carrinho",
+    });
+    res.json({
+      status: "ok",
+      data: response,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 router.post("/novo", upload.single("productImage"), async (req, res) => {
   const { produto, preco } = req.body;
   const imgProduto = `http://localhost:8080/uploads/${req.file.filename}`;
