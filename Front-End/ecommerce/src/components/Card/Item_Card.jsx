@@ -10,13 +10,13 @@ const Item_Card = ({ dados }) => {
   return (
     <>
       <main>
-        <section className="w-96 h-96 bg-white rounded-xl font-bold flex justify-center items-center max-sm:w-64 max-sm:h-64 max-sm:p-4">
+        <section className="w-80 h-80 bg-white rounded-xl font-bold flex justify-center items-center max-sm:w-64 max-sm:h-64 max-sm:p-4">
           <img src={dados.imgProduto} alt="Imagem do produto" srcSet="" />
         </section>
         <section className="text-xl py-3">
           <p>{dados.nomeProduto}</p>
         </section>
-        <section className="flex flex-row justify-between font-bold">
+        <section className="  flex flex-row justify-between font-bold">
           <section>
             <h3>R$: {dados.precoProduto}</h3>
           </section>
