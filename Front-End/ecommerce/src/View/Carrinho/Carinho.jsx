@@ -16,7 +16,7 @@ const Carrinho = () => {
 
   useEffect(() => {
     getdados();
-  }, []);
+  }, [compras]);
 
   return (
     <>

@@ -1,5 +1,12 @@
+import axios from "axios";
+
 /* eslint-disable react/prop-types */
 const CarrinhoItem = ({ dados }) => {
+  const remover = () => {
+    const id = dados._id;
+    axios.put(`http://localhost:8080/home/carrinho/${id}`);
+  };
+
   return (
     <>
       <main className="flex flex-row justify-around items-center max-sm:flex-col max-sm:justify-start max-sm:items-start max-sm:gap-10 max-sm:p-6">
@@ -21,7 +28,12 @@ const CarrinhoItem = ({ dados }) => {
             <button className="text-green-500 font-bold cursor-pointer transition-all duration-500 hover:text-green-400">
               Finalizar
             </button>
-            <button className="text-red-600 font-semibold cursor-pointer hover:text-red-400">
+            <button
+              onClick={() => {
+                remover();
+              }}
+              className="text-red-600 font-semibold cursor-pointer hover:text-red-400"
+            >
               Cancelar
             </button>
           </div>
