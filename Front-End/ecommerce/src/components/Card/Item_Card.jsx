@@ -1,5 +1,12 @@
+import axios from "axios";
+
 /* eslint-disable react/prop-types */
 const Item_Card = ({ dados }) => {
+  const comprar = () => {
+    const id = dados._id;
+    axios.put(`http://localhost:8080/home/${id}`);
+  };
+
   return (
     <>
       <main>
@@ -14,7 +21,10 @@ const Item_Card = ({ dados }) => {
             <h3>R$: {dados.precoProduto}</h3>
           </section>
           <section>
-            <button className="bg-sky-300 py-2 px-2 hover:rounded-lg hover:bg-sky-500 transition-all duration-500">
+            <button
+              className="bg-sky-300 py-2 px-2 hover:rounded-lg hover:bg-sky-500 transition-all duration-500"
+              onClick={() => comprar()}
+            >
               Adicionar ao carrinho {">"}
             </button>
           </section>
