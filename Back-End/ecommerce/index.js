@@ -13,11 +13,6 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-var corsOptions = {
-  origin: "https://fast-in-iy4x.vercel.app",
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
 app.listen(port, () => {
   console.log(`servidor operacional na porta: ${port}`);
 });
@@ -28,4 +23,4 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/home", cors(corsOptions), routes);
+app.use("/home", routes);
