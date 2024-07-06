@@ -4,7 +4,7 @@ import axios from "axios";
 const Item_Card = ({ dados }) => {
   const comprar = () => {
     const id = dados._id;
-    axios.put(`http://localhost:8080/home/${id}`);
+    axios.put(`https://fast-in-iy4x.vercel.app/home/${id}`);
   };
 
   return (

@@ -4,7 +4,7 @@ import axios from "axios";
 const CarrinhoItem = ({ dados }) => {
   const remover = () => {
     const id = dados._id;
-    axios.put(`http://localhost:8080/home/carrinho/${id}`);
+    axios.put(`https://fast-in-iy4x.vercel.app/home/carrinho/${id}`);
   };
 
   return (

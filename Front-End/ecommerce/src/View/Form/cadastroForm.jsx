@@ -12,7 +12,7 @@ function Cadastro() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/home/novo",
+        "https://fast-in-iy4x.vercel.app/home/novo",
         formData,
         {
           headers: {
@@ -20,8 +20,9 @@ function Cadastro() {
           },
         }
       );
+      console.log(response);
     } catch (error) {
-      console.error("Error uploading file:", error);
+      console.error(error);
     }
   };
 

@@ -7,7 +7,9 @@ const Carrinho = () => {
 
   const getdados = async () => {
     try {
-      let resposta = await axios.get("http://localhost:8080/home/carrinho");
+      let resposta = await axios.get(
+        "https://fast-in-iy4x.vercel.app/home/carrinho"
+      );
       setCompras(resposta.data.data);
     } catch (error) {
       console.log(error);
